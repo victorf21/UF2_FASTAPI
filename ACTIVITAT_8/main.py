@@ -1,12 +1,14 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 
 class Item(BaseModel):
     name: str
-    cognom: str | None = None
+    cognom: str 
     edad: int
-    altura: float | None = None
+    altura: float  
+    correo: str 
+    telefono: int | None = None
 
 app = FastAPI()
 
@@ -16,3 +18,11 @@ async def root():
             "cognom": "Fernandez",
             "edad": "20"
             }
+
+@app.get("/items/{item_id}", status_code=404)
+async def read_item(item_id):
+    return {"item": item_id}
+
+@app.post("/items/")
+async def create_item(item: Item):
+    return item
