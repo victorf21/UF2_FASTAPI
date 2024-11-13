@@ -19,9 +19,12 @@ async def root():
             "edad": "20"
             }
 
-@app.get("/items/{item_id}", status_code=404)
-async def read_item(item_id):
-    return {"item": item_id}
+items = {"foo": "The Foo Wrestlers"}
+@app.get("/items/{item_id}")
+async def read_item(item_id: str):
+    if item_id not in items:
+        raise HTTPException(status_code=404, detail="Item no encontrado, introduce un id ")
+    return {"item": items[item_id]}
 
 @app.post("/items/")
 async def create_item(item: Item):
