@@ -1,8 +1,6 @@
 # UF2_FASTAPI
 
-Resultado de la función GET en el Swagger
+# ACTIVITAT 9
 
-![GET SWAGGER](swagger_get.png)
 
-Resultado de la función GET en el Postman
-![GET POSTMAN](postman_get.png)
+![Body field en Postman](postman_bodyfield.png)
