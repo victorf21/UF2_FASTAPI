@@ -3,6 +3,11 @@ from typing import Annotated
 from fastapi import Body, FastAPI
 from pydantic import BaseModel, Field, HttpUrl
 
+import db_connect.conn as conn
+import schemas.alumne as alumne
+import crud.read as read
+
+
 app = FastAPI()
 
 class Image(BaseModel):
@@ -33,3 +38,8 @@ async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
 @app.post("/offers/")
 async def create_offer(offer: Offer):
     return offer
+
+# Ruta para obtener todos los alumnes
+@app.get("/users/")
+def read_alumnes():
+    return alumne.alumne_schema(read.read_users())
