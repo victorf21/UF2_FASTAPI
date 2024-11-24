@@ -31,15 +31,6 @@ class Offer(BaseModel):
     price: float
     items: list[Item]
 
-class tablaUsers(BaseModel):
-    user_id: str
-    user_name: str
-    user_surname: str        
-    user_age: str         
-    user_email: str
-    user_telefon: int
-
-
 @app.put("/items/{item_id}")
 async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
     results = {"item_id": item_id, "item": item}
@@ -51,5 +42,5 @@ async def create_offer(offer: Offer):
 
 # Ruta para obtener todos los users
 @app.get("/users", response_model=List[dict])
-def read_users():
-    return user.user_schema(read.read_users())
+def read_user():
+    return user.users_schema(read.read_users())

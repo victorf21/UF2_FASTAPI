@@ -18,3 +18,4 @@ def read_users():
          # Cierra la conexión a la base de datos
         connection.close()
         conn.close()
+    return users
