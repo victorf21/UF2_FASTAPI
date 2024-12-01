@@ -1,14 +1,8 @@
 # UF2_FASTAPI
 
-# ACTIVITAT 9
+# ACTIVITAT 10
+Ruta /penjat/tematica/opcions en swagger para obtener todas las tematicas
+![alt text](image-1.png)
 
-Body field en Postman
-![Body field en Postman](postman_bodyfield.png)
-
-Body-Nested Models en Swagger
-![Body-Nested Models en Swagger](swagger_body-nested_models.png)
-Resultado:
-![Body-Nested Models en Swagger](swaggerresultado_body-nested_models.png)
-
-Ruta /users del read_users()
-![Postman](image.png)
+Ruta /penjat/tematica/{option} en swagger para obtener una palabra aleatoria de un tema escogido
+![alt text](image-2.png)
