@@ -17,4 +17,3 @@ def get_connection():
         # Manejo de errores
         print("Error al conectar a la base de datos:", error)
         return None, None
-get_connection()
