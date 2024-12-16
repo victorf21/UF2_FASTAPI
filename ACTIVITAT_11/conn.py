@@ -2,18 +2,22 @@ import psycopg2
 
 def get_connection():
     try:
-        #Configuración de conexión
+        dbname = "postgres1"
+        user = "postgres"
+        password = "root"
+        host = "localhost"
+        port = "5432"
+        
         conn = psycopg2.connect(
-            dbname='postgres',        
-            user='user_postgres',     
-            password='pass_postgres', 
-            host='localhost',         
-            port='5432'               
+            host=host,
+            port=port,
+            user=user,
+            password=password,
+            database=dbname
         )
-        #Crear un cursor para ejecutar consultas SQL
-        connection = conn.cursor() 
-        return conn, connection
-    except (Exception, psycopg2.Error) as error:
-        #Manejo de errores
-        print("Error al conectar a la base de datos:", error)
-        return None, None
+        print("Conexió exitosa a la base de dades")
+        return conn
+
+    except Exception as e:
+        print(f"Error de connexió a la base de dades: {e}")
+        return None  # Retornar None si hi ha un error
