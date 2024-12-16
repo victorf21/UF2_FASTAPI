@@ -1,8 +1,18 @@
-# UF2_FASTAPI
+# ACTVITAT 11
 
-# ACTIVITAT 10
-Ruta /penjat/tematica/opcions en swagger para obtener todas las tematicas
-![alt text](image-1.png)
+Diseño base de datos (al final he hecho cambios en en la base de datos porque el diseño principal no era el adecuado)
+![alt text](/imagenes_11/image-6.png)
 
-Ruta /penjat/tematica/{option} en swagger para obtener una palabra aleatoria de un tema escogido
-![alt text](image-2.png)
+Mostrar texto "Començar partida"
+![alt text](/imagenes_11/image.png)
+
+Mostrar texto abecedario según un idioma
+![alt text](/imagenes_11/image-1.png)
+
+Actualizar estadisticas de usuario
+![alt text](/imagenes_11/image-2.png)
+![alt text](/imagenes_11/image-3.png)
+
+Modificar intentos
+![alt text](/imagenes_11/image-4.png)
+![alt text](/imagenes_11/image-5.png)
